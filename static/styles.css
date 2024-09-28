@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #2d3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: center;
+    background-color: #3a4a63;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #2d3e50;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.search form input,
+.search form select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search form button {
+    padding: 10px 20px;
+    background-color: #3a4a63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.listings {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.listings h3 {
+    font-size: 24px;
+    border-bottom: 2px solid #2d3e50;
+    padding-bottom: 10px;
+}
+
+.property {
+    background-color: #f9e0b3;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.property h4 {
+    font-size: 20px;
+    color: #2d3e50;
+}
+
+.property p {
+    color: #666;
+}
+
+.property button {
+    padding: 10px 15px;
+    background-color: #3a4a63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cities {
+    padding: 20px;
+    background-color: #f9d08b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+}
+
+.cities h3 {
+    font-size: 24px;
+    border-bottom: 2px solid #2d3e50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #2d3e50;
+}
+
+.city-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.city {
+    position: relative;
+    width: 30%;  /* Adjust width as needed */
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.city img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.city-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    color: #fff;
+    text-align: center;
+}
+
+.city-info p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.city-info span {
+    font-size: 14px;
+}
+
+.city:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .city {
+        width: 45%;  /* Adjusts for smaller screens */
+        height: 150px;
+    }
+
+    .cities h3, .listings h3 {
+        font-size: 20px;
+    }
+
+    .property h4, .city-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .city {
+        width: 100%;  /* Stacks cities vertically on very small screens */
+        height: 150px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .cities h3, .listings h3 {
+        font-size: 18px;
+    }
+
+    .property h4, .city-info p {
+        font-size: 14px;
+    }
+}
+

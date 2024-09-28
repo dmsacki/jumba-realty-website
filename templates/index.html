@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumba Realty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <img src="assets/images/logo.png" alt="Jumba Realty Logo" class="logo">
+            <h1>J U M B A</h1>
+            <p>Y O U R  D R E A M  H O M E  A W A I T S !</p>
+            <nav>
+                <ul>
+                    <li><a href="#">For Sale</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">For Rent</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search">
+        <h2>Find Your Next Property</h2>
+        <form>
+            <input type="text" placeholder="Type City">
+            <select>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Land">Land</option>
+            </select>
+            <input type="number" placeholder="Min. Price">
+            <input type="number" placeholder="Max. Price">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <!-- Listings Section -->
+    <section class="listings">
+        <h3>Latest Listings</h3>
+        
+        <div class="property"></div>
+            <img src="assets/images/property1.jpg" alt="Property 1">
+            <h3>Residential Land</h3>
+            <h4>Land - TZS. 13,800,000</h4>
+            <p>400 sqm</p>
+            <p>Kigamboni,Dar es Salaam</p>
+            <button>Sale</button>
+        </div>
+        <div class="property">
+            <img src="assets/images/property2.jpg" alt="Property 2">
+            <h3>Stand Alone Appartment</h3>
+            <h4>House - TZS. 300,000</h4>
+            <p>02 Beds | 02 Baths | 350 sqm</p>
+            <p>Kimara, Dar es Salaam</p>
+            <button>Rent</button>
+        </div>
+
+        <div class="property">
+            <img src="assets/images/property3.jpg" alt="Property 3">
+            <h3>Full furnished Appartment</h3>
+            <h4>House - TZS. 4,320,000</h4>
+            <p>05 Beds | 06 Baths | 420 sqm</p>
+            <p>Mikocheni, Dar es Salaam</p>
+            <button>Rent</button>
+        </div>
+
+        <div class="property">
+            <img src="assets/images/property4.jpg" alt="Property 4">
+            <h3>2 Floors House</h3>
+            <h4>House - TZS. 120,000,000</h4>
+            <p>04 Beds | 03 Baths | 900 sqm</p>
+            <p>Luguluni, Dar es Salaam</p>
+            <button>Sale</button>
+        </div>
+
+        <div class="property">
+            <img src="assets/images/property5.jpg" alt="Property 5">
+            <h3>Corner Plot</h3>
+            <h4>Land - TZS. 60,000,000</h4>
+            <p>2130 sqm</p>
+            <p>Sakina, Arusha</p>
+            <button>Sale</button>
+        </div>
+        <div class="property">
+            <img src="assets/images/property6.jpg" alt="Property 6">
+            <h3>3 in 1 House</h3>
+            <h4>house - TZS. 530,800,000</h4>
+            <p>950 sqm</p>
+            <p>Tabata,Dar es Salaam</p>
+            <button>Sale</button>
+        </div>
+
+        <div class="property">
+            <img src="assets/images/property7.jpg" alt="Property 7">
+            <h3>Stand Alone Apartment</h3>
+            <h4>House - TZS. 280,000</h4>
+            <p>03 Beds | 03 Baths | 520 sqm</p>
+            <p>Kiluvya, Pwani</p>
+            <button>Rent</button>
+        </div>
+        <div class="property">
+            <img src="assets/images/property1.jpg" alt="Property 8">
+            <h3>Classic House</h3>
+            <h4>House - TZS. 350,000,000</h4>
+            <p>03 Beds | 03 Baths | 700 sqm</p>
+            <p>Goba, Dar es Salaam</p>
+            <button>Sale</button>
+        </div>
+
+
+        <!-- Add more property listings as needed -->
+    </section>
+
+    <!-- City Listings Section -->
+    <section class="cities">
+        <h3>Find Properties in these cities</h3>
+        <div class="city-list">
+            <div class="city">
+                <img src="assets/images/dar-es-salaam.jpg" alt="Dar es Salaam">
+                <div class="city-info">
+                    <p>DAR ES SALAAM</p>
+                    <span>10,473 Properties</span>
+                </div>
+            </div>
+            <div class="city">
+                <img src="assets/images/zanzibar.jpg" alt="Zanzibar">
+                <div class="city-info">
+                    <p>Zanzibar</p>
+                    <span>727 Properties</span>
+                </div>
+            </div>
+            <div class="city">
+                <img src="assets/images/arusha.jpg" alt="Arusha">
+                <div class="city-info">
+                    <p>Arusha</p>
+                    <span>792 Properties</span>
+                </div>
+            </div>
+            <div class="city">
+                <img src="assets/images/mwanza.jpg" alt="Mwanza">
+                <div class="city-info">
+                    <p>Mwanza</p>
+                    <span>314 Properties</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h3>Contact Us</h3>
+        <form method="POST" action="/contact">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="services">
+            <h4>Our Services</h4>
+            <ul>
+                <li>Real Estate Brokerage</li>
+                <li>Land (Plots) Sale</li>
+                <li>Property Management</li>
+            </ul>
+        </div>
+        <div class="terms"></div>
+            <h4>Terms and settings</h4>
+            <ul>
+                <li>Privacy & cookies</li>
+                <li>Terms & conditions</li>
+                <li>Partner dispute</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h4>Contact Us</h4>
+            <p>Email: info@jumbarealty.com</p>
+            <p>Phone: +255 623 529 306</p>
+            <p>Address: KV House, Bagamoyo Rd, Dar es Salaam.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
