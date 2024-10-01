@@ -6,19 +6,14 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
-body {
-    background-image: url('assets/images/wallpaper-photo.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire page */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Keeps the image fixed when scrolling */
-}
-
 
 header {
-    background-color: #2d3e50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    text-align:center;
+    background-image: url('static/images/header-background.jpg'); /* Use the appropriate background image */
+    background-size: cover;
+    background-position: center;
+    color:white;
+    padding:50px 0;
 }
 
 header .header-content {
@@ -33,14 +28,14 @@ header .logo {
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 3em;
     letter-spacing: 3px;
-    margin: 0;
+    letter-spacing:10px;
 }
 
 header p {
-    font-size: 18px;
-    letter-spacing: 1.5px;
+    font-size: 1.5em;
+    letter-spacing: 5px;
 }
 
 nav ul {
@@ -52,15 +47,14 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin-right: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
+    font-weight:bold;
 }
 
 nav ul li a:hover {
@@ -71,7 +65,7 @@ nav ul li a:hover {
 
 .search {
     background-color: #ffffff;
-    padding: 40px 20px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -87,6 +81,7 @@ nav ul li a:hover {
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size:1em;
 }
 
 .search form button {
@@ -99,6 +94,9 @@ nav ul li a:hover {
 }
 
 .listings {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:20px;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -113,6 +111,7 @@ nav ul li a:hover {
 
 .property {
     background-color: #f9e0b3;
+    border:1px solid #ccc;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -124,6 +123,7 @@ nav ul li a:hover {
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
+    height:auto;
 }
 
 .property h4 {
@@ -136,13 +136,15 @@ nav ul li a:hover {
 }
 
 .property button {
-    padding: 10px 15px;
-    background-color: #3a4a63;
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
 }
+
 
 .cities {
     padding: 20px;
