@@ -6,6 +6,13 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
+body {
+    background-image: url('assets/images/wallpaper-photo.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+}
+
 
 header {
     background-color: #2d3e50;
